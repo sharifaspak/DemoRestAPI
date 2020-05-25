@@ -12,7 +12,7 @@ import com.volmar.demorestapi.model.Student;
 import com.volmar.demorestapi.service.StudentService;
 
 @RestController
-@RequestMapping(value = "/api/", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/api/"/*, consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE*/)
 public class StudentController {
 
 	@Autowired
