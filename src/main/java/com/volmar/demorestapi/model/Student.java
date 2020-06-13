@@ -3,7 +3,7 @@ package com.volmar.demorestapi.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Document(collection = "Student")
 public class Student {
 
 	@Id
@@ -50,4 +50,12 @@ public class Student {
 		this.name = name;
 	}
 
+	@Override
+	public String toString() {
+		return "Student{" +
+				"id='" + id + '\'' +
+				", registration=" + registration +
+				", name='" + name + '\'' +
+				'}';
+	}
 }

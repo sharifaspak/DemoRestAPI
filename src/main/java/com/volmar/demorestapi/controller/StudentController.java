@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.volmar.demorestapi.model.Student;
 import com.volmar.demorestapi.service.StudentService;
 
+import javax.xml.transform.sax.SAXSource;
+import java.sql.SQLOutput;
+import java.util.List;
+
 @RestController
 @RequestMapping(value = "/api/"/*, consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE*/)
 public class StudentController {
@@ -25,7 +29,15 @@ public class StudentController {
 
 	@RequestMapping(value = "/v1/student", method = RequestMethod.GET)
 	public Iterable<Student> studentV1() {
-		return studentserviceV1.findAll();
+		System.out.println("==========================");
+		final Iterable<Student> all = studentserviceV1.findAll();
+		Iterable<Student> studentList = all;
+		studentList.forEach(System.out::println);
+
+		List<Student> students = (List<Student>) studentList;
+		students.stream().filter(student -> student.getName().contains("aspak") ).forEach(System.out::println);
+
+		return all;
 	}
 
 	@RequestMapping(value = "/v2/student", method = RequestMethod.GET)
