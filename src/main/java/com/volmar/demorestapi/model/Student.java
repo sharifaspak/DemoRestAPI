@@ -58,6 +58,4 @@ public class Student {
 				", name='" + name + '\'' +
 				'}';
 	}
-
-	//Adding comment 2
 }
