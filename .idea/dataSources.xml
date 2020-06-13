@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="MongoDB - @192.168.99.100" uuid="3772c0a3-59b0-48a5-9bd0-370d6fb33491">
+      <driver-ref>mongo</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
+      <jdbc-url>mongodb://192.168.99.100:27017</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Mongo2" uuid="4d91012b-7abb-4ef7-9b4e-862a02c29ec2">
+      <driver-ref>mongo</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
+      <jdbc-url>mongodb://mongodb:27017/demorest</jdbc-url>
+    </data-source>
+  </component>
+</project>
